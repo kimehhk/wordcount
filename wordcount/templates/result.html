@@ -1,0 +1,41 @@
+<head>
+    <style>
+        body {
+            background-color: rgb(174, 209, 230);
+        }
+        h1 {
+            text-align: center;
+            color: rgb(44, 70, 119);
+            font-family:'Franklin Gothic Medium';
+            font-size: 50px;
+        }
+        .box {
+            position: relative;
+            margin: 10px 180px 0px 180px;
+            padding: 20px;
+            border: cornsilk;
+            border-radius: 3px;
+            border-style: dotted;
+            border-width: 10px;
+        }
+        h2 {
+            background-color: rgba(31, 46, 78, 0.534);
+            color: rgb(22, 34, 58);
+        }
+    </style>
+</head>
+<body>
+    <h1>ANALYZE YOUR TEXT</h1>
+    <div class="box">
+        <h2>당신이 입력한 텍스트는 {{total}}</h2>
+        <a href="{%url 'main'%}"></a>
+        <br>
+        <h2>입력한 텍스트</h2>
+        {{inputtext}}
+        <h2> 단어 카운트 </h2>
+        {% for w, howmany in dictionary%}
+        {{w}} : {{howmany}}
+        <br>
+        {%endfor%}
+    </div>
+</body>

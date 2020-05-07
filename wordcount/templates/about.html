@@ -1,0 +1,41 @@
+<head>
+    <style>    
+        body {
+            background-color: rgb(174, 209, 230);
+        }
+        h1 {
+            text-align: center;
+            color: rgb(44, 70, 119);
+            font-family:'Franklin Gothic Medium';
+            font-size: 50px;
+        }
+        .box {
+            position: relative;
+            margin: 10px 180px 0px 180px;
+            padding: 20px 20px 0px 20px;
+            border: cornsilk;
+            border-radius: 3px;
+            border-style: dotted;
+            border-width: 10px;
+        }
+        textarea {
+            background-color: rgba(31, 46, 78, 0.534);
+        }
+        .return {
+            position: relative;
+            top: -40px;
+            left: 900px;
+        }
+    </style>
+</head>
+<body>
+    <h1>WRITE YOUR STORY</h1>
+    <div class="box">
+        <form action="{%url 'result'%}">
+            <textarea name="fulltext" cols="125" rows="25"></textarea>
+            <br>
+            <input type="submit" value="count">
+        </form>
+    </div>
+    <a href="{%url 'main'%}" class="return">Main으로 돌아가기</a>
+</body>
